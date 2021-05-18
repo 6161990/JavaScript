@@ -65,3 +65,30 @@ console.log(fruits[0]); //Apple
 console.log(fruits[1]); //Banana
 console.log(fruits[2]); //Cherry
 
+//변수 var, let, const
+//var는 사용하지 않음을 권장
+//재사용이 가능!
+let a = 2;
+let b = 6;
+console.log(a+b);
+console.log(a-b);
+console.log(a*b);
+console.log(a/b);
+
+//let: 값의 재할당 가능
+let c  = 9;
+console.log(c);
+c  = 99;
+console.log(c);
+
+//const: 값의 재할당 불가
+const d  = 10;
+console.log(d);
+d  = 990;
+console.log(d); //TypeError : Assignment to constant variable
+
+
+//예약어 : 특별한 의미를 가지고 있어, 변수나 함수 이름 등으로 사용할 수 없는 단어
+let this ='Hello!'; //SyntaxError
+let if =123;  //SyntaxError
+let break =true;  //SyntaxError
