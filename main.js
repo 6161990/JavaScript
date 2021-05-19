@@ -84,11 +84,91 @@ console.log(c);
 //const: 값의 재할당 불가
 const d  = 10;
 console.log(d);
-d  = 990;
+//d  = 990;
 console.log(d); //TypeError : Assignment to constant variable
 
 
 //예약어 : 특별한 의미를 가지고 있어, 변수나 함수 이름 등으로 사용할 수 없는 단어
-let this ='Hello!'; //SyntaxError
-let if =123;  //SyntaxError
-let break =true;  //SyntaxError
+// let this ='Hello!'; //SyntaxError
+// let if =123;  //SyntaxError
+// let break =true;  //SyntaxError
+
+//함수 
+function helloFunc(){
+  //실행코드
+  console.log(1234);
+}
+
+//함수호출
+helloFunc(); //1234
+
+function returnFunc(){
+  return 123;
+}
+
+let aer = returnFunc();
+
+console.log(aer); //123
+
+//함수 선언!
+function sum(z,r) { //a,b는 매개변수
+  return z+r;
+}
+
+//재사용!
+let j = sum(1,2); //1과 2는 인수 
+let k = sum(7,12);
+let y = sum(3,10);
+console.log(j,k,y); //3,19,13
+
+//가명(이름이 있는) 함수 
+//함수 선언
+function hello2(){
+  console.log('Hello!');
+}
+
+//익명(이름이 없는) 함수
+//함수 표현!
+let world = function(){
+  console.log('World');
+}
+
+//함수 호출!
+hello2(); //Hello!
+world(); //World
+
+//객체 제이터
+const yoon = {
+  name: 'yoonji',
+  age : 27,
+  //메소드(method)
+  getName:function(){
+    return this.name;
+  }
+};
+
+const herName = yoon.getName();
+console.log(herName); //yoonji
+console.log(yoon.getName()); //yoonji
+console.log(yoon.name); //yoonji
+
+
+//조건문
+let isShow = true;
+let checked = false;
+
+if(isShow){
+  console.log('Show!'); //Show!
+}
+
+if(checked){
+  console.log('Checked!');
+}
+
+let isShow1 = true;
+
+if(isShow1){
+  console.log('Show!'); //Show!
+}else {
+  console.log('Hide!'); 
+}
